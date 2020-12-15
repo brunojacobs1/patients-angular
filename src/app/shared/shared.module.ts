@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { PacientesModule } from '../pacientes/pacientes.module';
 import { DiagnosticosModule } from '../diagnosticos/diagnosticos.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [NavigationComponent],
@@ -22,6 +23,7 @@ import { DiagnosticosModule } from '../diagnosticos/diagnosticos.module';
     MatListModule,
     PacientesModule,
     DiagnosticosModule,
+    AppRoutingModule,
   ],
   exports: [NavigationComponent],
 })
