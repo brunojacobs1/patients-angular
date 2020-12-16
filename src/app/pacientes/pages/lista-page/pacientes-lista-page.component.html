@@ -1,7 +1,12 @@
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" *ngFor="let num of [1, 2, 3, 4, 5, 6, 7]">
-      <app-paciente></app-paciente>
+    <div fxFlex="25%" *ngFor="let paciente of pacientes">
+      <app-paciente [paciente]="paciente"></app-paciente>
     </div>
+  </div>
+  <div class="container">
+    <button class="boton" mat-raised-button color="primary">
+      Agregar paciente
+    </button>
   </div>
 </div>

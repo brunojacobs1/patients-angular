@@ -6,6 +6,7 @@ import { PacienteComponent } from './components/paciente/paciente.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PacienteService } from './services/paciente.service';
 
 @NgModule({
   declarations: [PacientesListaPageComponent, PacienteComponent],
@@ -17,5 +18,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule,
   ],
   exports: [PacientesListaPageComponent, PacienteComponent],
+  providers: [PacienteService],
 })
 export class PacientesModule {}

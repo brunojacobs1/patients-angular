@@ -1,7 +1,14 @@
 <mat-card>
   <mat-card-header>
     <div mat-card-avatar class="avatar">
-      <mat-icon class="icon-male">face</mat-icon>
+      <mat-icon
+        [ngClass]="{
+          'icon-male': paciente.genero === 'masculino',
+          'icon-female': paciente.genero === 'femenino',
+          'icon-otro': paciente.genero === 'otro'
+        }"
+        >face</mat-icon
+      >
     </div>
     <mat-card-title>{{ paciente.nombre }}</mat-card-title>
     <mat-card-subtitle>{{ paciente.ocupacion }}</mat-card-subtitle>
