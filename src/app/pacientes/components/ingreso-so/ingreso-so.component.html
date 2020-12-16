@@ -1,0 +1,26 @@
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Salud Ocupacional </mat-panel-title>
+    <mat-panel-description>
+      {{ ingreso.fecha | date }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <div>
+    <h2>{{ ingreso.descripcion }}</h2>
+
+    <p>Especialista: {{ ingreso.especialista }}</p>
+    <p>Empleador: {{ ingreso.nombreEmpleador }}</p>
+    <div *ngIf="ingreso.bajaPorEnfermedad">
+      <p>
+        Descanso médico recetado desde
+        {{ ingreso.bajaPorEnfermedad.fechaInicio | date }} hasta
+        {{ ingreso.bajaPorEnfermedad.fechaFin | date }}
+      </p>
+    </div>
+  </div>
+  <div *ngIf="ingreso.diagnosisCodes">
+    <app-diagnosticos
+      [diagnosisCodes]="ingreso.diagnosisCodes"
+    ></app-diagnosticos>
+  </div>
+</mat-expansion-panel>

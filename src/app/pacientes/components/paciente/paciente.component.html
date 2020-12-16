@@ -3,9 +3,9 @@
     <div mat-card-avatar class="avatar">
       <mat-icon
         [ngClass]="{
-          'icon-male': paciente.genero === 'masculino',
-          'icon-female': paciente.genero === 'femenino',
-          'icon-otro': paciente.genero === 'otro'
+          'icon-male': paciente.genero === 'Masculino',
+          'icon-female': paciente.genero === 'Femenino',
+          'icon-otro': paciente.genero === 'Otro'
         }"
         >face</mat-icon
       >
@@ -17,7 +17,9 @@
     <p>Cantidad de ingresos: {{ paciente.ingresos.length }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>REVISAR</button>
+    <button mat-button [routerLink]="['/pacientes', paciente.id]">
+      REVISAR
+    </button>
     <button mat-button>ELIMINAR</button>
   </mat-card-actions>
 </mat-card>

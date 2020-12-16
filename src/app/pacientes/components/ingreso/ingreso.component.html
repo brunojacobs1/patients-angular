@@ -1,0 +1,11 @@
+<div class="container" [ngSwitch]="ingreso.tipo">
+  <div *ngSwitchCase="'Hospital'">
+    <app-ingreso-hospital [ingreso]="ingreso"></app-ingreso-hospital>
+  </div>
+  <div *ngSwitchCase="'SaludOcupacional'">
+    <app-ingreso-so [ingreso]="ingreso"></app-ingreso-so>
+  </div>
+  <div *ngSwitchDefault>
+    <app-ingreso-chequeo [ingreso]="ingreso"></app-ingreso-chequeo>
+  </div>
+</div>

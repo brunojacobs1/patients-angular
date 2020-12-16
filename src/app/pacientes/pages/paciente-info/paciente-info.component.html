@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>{{ paciente?.nombre }}</h1>
+  <h3>Fecha de nacimiento: {{ paciente?.fechaDeNacimiento | date }}</h3>
+  <h3>Edad: {{ edad }} años</h3>
+  <h3>Género: {{ paciente?.genero }}</h3>
+  <h3>Ocupación: {{ paciente?.ocupacion }}</h3>
+  <div *ngIf="paciente?.ingresos.length; else sinIngresos">
+    <h3>Ingresos:</h3>
+    <div *ngFor="let ingreso of paciente?.ingresos">
+      <app-ingreso [ingreso]="ingreso"></app-ingreso>
+    </div>
+  </div>
+  <ng-template #sinIngresos>
+    <h3><em>Sin ingresos</em></h3>
+  </ng-template>
+  <button mat-raised-button color="primary" [routerLink]="['/pacientes']">
+    Regresar
+  </button>
+</div>

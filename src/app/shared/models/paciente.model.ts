@@ -10,7 +10,7 @@ export default interface Paciente {
 }
 
 export enum Genero {
-  Masculino = 'masculino',
-  Femenino = 'femenino',
-  Otro = 'otro',
+  Masculino = 'Masculino',
+  Femenino = 'Femenino',
+  Otro = 'Otro',
 }

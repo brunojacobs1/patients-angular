@@ -1,0 +1,12 @@
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>Diagnósticos</mat-panel-title>
+  </mat-expansion-panel-header>
+  <button
+    mat-raised-button
+    color="primary"
+    *ngFor="let diags of diagnosisCodes"
+  >
+    {{ diags }}
+  </button>
+</mat-expansion-panel>

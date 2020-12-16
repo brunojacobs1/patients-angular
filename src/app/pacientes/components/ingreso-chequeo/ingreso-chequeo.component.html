@@ -1,0 +1,18 @@
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Chequeo </mat-panel-title>
+    <mat-panel-description>
+      {{ ingreso.fecha | date }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <div>
+    <h2>{{ ingreso.descripcion }}</h2>
+    <p>Especialista: {{ ingreso.especialista }}</p>
+    <p>Rating de salud: {{ ratingSalud }}</p>
+  </div>
+  <div *ngIf="ingreso.diagnosisCodes">
+    <app-diagnosticos
+      [diagnosisCodes]="ingreso.diagnosisCodes"
+    ></app-diagnosticos>
+  </div>
+</mat-expansion-panel>
