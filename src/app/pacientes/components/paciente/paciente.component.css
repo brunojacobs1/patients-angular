@@ -1,0 +1,22 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-icons {
+  font-size: 40px;
+}
+
+.icon-male {
+  color: cornflowerblue;
+}
+
+.icon-female {
+  color: pink;
+}
+
+.mat-icon {
+  height: 40px;
+  width: 40px;
+}

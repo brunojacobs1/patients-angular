@@ -6,7 +6,7 @@ export default interface Paciente {
   fechaDeNacimiento: string;
   genero: Genero;
   ocupacion: string;
-  ingresos: Ingreso;
+  ingresos: Ingreso[];
 }
 
 export enum Genero {

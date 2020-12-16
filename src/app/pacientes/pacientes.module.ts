@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PacientesListaPageComponent } from './pages/lista-page/pacientes-lista-page.component';
-import { SharedModule } from '../shared/shared.module';
+import { MatCardModule } from '@angular/material/card';
+import { PacienteComponent } from './components/paciente/paciente.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [PacientesListaPageComponent],
-  imports: [CommonModule, SharedModule],
-  exports: [PacientesListaPageComponent],
+  declarations: [PacientesListaPageComponent, PacienteComponent],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    FlexLayoutModule,
+  ],
+  exports: [PacientesListaPageComponent, PacienteComponent],
 })
 export class PacientesModule {}

@@ -7,5 +7,5 @@ interface Descarga {
 
 export default interface IngresoHospital extends BaseIngreso {
   tipo: 'Hospital';
-  criterio: Descarga;
+  descarga: Descarga;
 }
