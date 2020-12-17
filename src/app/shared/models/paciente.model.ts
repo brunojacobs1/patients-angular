@@ -9,6 +9,14 @@ export default interface Paciente {
   ingresos: Ingreso[];
 }
 
+export interface NuevoPaciente {
+  nombre: string;
+  fechaDeNacimiento: string;
+  genero: Genero;
+  ocupacion: string;
+  ingresos: Ingreso[];
+}
+
 export enum Genero {
   Masculino = 'Masculino',
   Femenino = 'Femenino',

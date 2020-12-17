@@ -1,11 +1,19 @@
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <div fxFlex="25%" *ngFor="let paciente of pacientes">
-      <app-paciente [paciente]="paciente"></app-paciente>
+      <app-paciente
+        (eliminarPaciente)="deletePaciente($event)"
+        [paciente]="paciente"
+      ></app-paciente>
     </div>
   </div>
   <div class="container">
-    <button class="boton" mat-raised-button color="primary">
+    <button
+      (click)="addPaciente()"
+      class="boton"
+      mat-raised-button
+      color="primary"
+    >
       Agregar paciente
     </button>
   </div>

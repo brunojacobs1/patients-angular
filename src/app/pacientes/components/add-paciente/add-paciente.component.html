@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Nuevo paciente</h2>
+
+  <mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" formControlName="nombre" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Fecha de nacimiento"
+        [matDatepicker]="picker"
+        formControlName="fechaDeNacimiento"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Género" formControlName="genero">
+        <mat-option value="Masculino">Masculino</mat-option>
+        <mat-option value="Femenino">Femenino</mat-option>
+        <mat-option value="Otro">Otro</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Ocupación" formControlName="ocupacion" />
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="cerrar()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="guardar()">
+      Guardar
+    </button>
+  </mat-dialog-actions>
+</div>

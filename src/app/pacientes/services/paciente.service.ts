@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import Paciente from 'src/app/shared/models/paciente.model';
+import Paciente, { NuevoPaciente } from 'src/app/shared/models/paciente.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -21,6 +21,14 @@ export class PacienteService {
     return this.httpClient.get<Paciente>(`${this.url}/${idPaciente}`);
   }
 
+  addPaciente(nuevoPaciente: NuevoPaciente) {
+    return this.httpClient.post<NuevoPaciente>(this.url, nuevoPaciente);
+  }
+
+  deletePaciente(idPaciente: string) {
+    return this.httpClient.delete(`${this.url}/${idPaciente}`);
+  }
+
   calcularEdad(fechaDeNacimiento: string): number {
     const hoy = new Date();
     const nacimiento = new Date(fechaDeNacimiento);
@@ -30,5 +38,17 @@ export class PacienteService {
       edad--;
     }
     return edad;
+  }
+
+  formatearFecha(fechaDeNacimiento: any): string {
+    const fecha = new Date(fechaDeNacimiento);
+    let mes = '' + (fecha.getMonth() + 1);
+    let dia = '' + fecha.getDate();
+    const anio = fecha.getFullYear();
+
+    if (mes.length < 2) mes = '0' + mes;
+    if (dia.length < 2) dia = '0' + dia;
+
+    return [anio, mes, dia].join('-');
   }
 }

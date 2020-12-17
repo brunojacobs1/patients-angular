@@ -20,6 +20,8 @@
     <button mat-button [routerLink]="['/pacientes', paciente.id]">
       REVISAR
     </button>
-    <button mat-button>ELIMINAR</button>
+    <button (click)="eliminar(paciente.id)" mat-button color="warn">
+      ELIMINAR
+    </button>
   </mat-card-actions>
 </mat-card>

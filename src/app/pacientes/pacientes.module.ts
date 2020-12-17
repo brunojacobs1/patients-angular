@@ -15,7 +15,15 @@ import { IngresoHospitalComponent } from './components/ingreso-hospital/ingreso-
 import { IngresoChequeoComponent } from './components/ingreso-chequeo/ingreso-chequeo.component';
 import { IngresoSOComponent } from './components/ingreso-so/ingreso-so.component';
 import { DiagnosticosComponent } from './components/diagnosticos/diagnosticos.component';
-
+import { AddPacienteComponent } from './components/add-paciente/add-paciente.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     PacientesListaPageComponent,
@@ -26,6 +34,7 @@ import { DiagnosticosComponent } from './components/diagnosticos/diagnosticos.co
     IngresoChequeoComponent,
     IngresoSOComponent,
     DiagnosticosComponent,
+    AddPacienteComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +44,14 @@ import { DiagnosticosComponent } from './components/diagnosticos/diagnosticos.co
     FlexLayoutModule,
     RouterModule,
     MatExpansionModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatSnackBarModule,
   ],
   exports: [
     PacientesListaPageComponent,
