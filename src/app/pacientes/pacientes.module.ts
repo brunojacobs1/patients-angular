@@ -24,6 +24,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AddIngresoComponent } from './components/add-ingreso/add-ingreso.component';
 @NgModule({
   declarations: [
     PacientesListaPageComponent,
@@ -35,6 +36,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     IngresoSOComponent,
     DiagnosticosComponent,
     AddPacienteComponent,
+    AddIngresoComponent,
   ],
   imports: [
     CommonModule,
