@@ -1,4 +1,4 @@
-import Diagnosis from '../diagnosis.model';
+import Diagnostico from '../diagnostico.model';
 import IngresoChequeo from './chequeo.model';
 import IngresoHospital from './hospital.model';
 import IngresoSaludOcupacional from './saludOcupacional.model';
@@ -8,7 +8,7 @@ export default interface BaseIngreso {
   descripcion: string;
   fecha: string;
   especialista: string;
-  diagnosisCodes?: Array<Diagnosis['codigo']>;
+  diagnosisCodes?: Array<Diagnostico['codigo']>;
 }
 
 export type Ingreso =

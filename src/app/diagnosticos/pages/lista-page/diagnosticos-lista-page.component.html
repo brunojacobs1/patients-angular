@@ -1,1 +1,7 @@
-<p>diagnosticos-lista-page works!</p>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" *ngFor="let diagnostico of diagnosticos">
+      <app-diagnostico [diagnostico]="diagnostico"></app-diagnostico>
+    </div>
+  </div>
+</div>

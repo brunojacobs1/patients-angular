@@ -5,8 +5,9 @@
   <button
     mat-raised-button
     color="primary"
-    *ngFor="let diags of diagnosisCodes"
+    [routerLink]="['/diagnosticos', diag]"
+    *ngFor="let diag of diagnosisCodes"
   >
-    {{ diags }}
+    {{ diag }}
   </button>
 </mat-expansion-panel>

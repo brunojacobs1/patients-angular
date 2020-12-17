@@ -7,6 +7,7 @@ export const environment = {
   apiUrl: 'http://localhost:3001/api/',
   endpoints: {
     pacientes: 'pacientes',
+    diagnosticos: 'diagnosticos',
   },
 };
 

@@ -1,0 +1,9 @@
+<div class="container">
+  <app-diagnostico
+    *ngIf="diagnostico"
+    [diagnostico]="diagnostico"
+  ></app-diagnostico>
+  <button (click)="regresar()" mat-raised-button color="primary">
+    Regresar
+  </button>
+</div>
